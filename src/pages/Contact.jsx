@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Instagram, Send, CheckCircle2 } from "lucide-react";
-import { base44 } from "@/api/base44Client";
 import { BRAND } from "@/lib/brand";
 import { useSEO } from "@/lib/useSEO";
 
@@ -67,15 +66,24 @@ export default function Contact() {
     if (!validate()) return;
     setSubmitting(true);
     try {
-      await base44.entities.Enquiry.create({
-        name: form.name.trim(),
-        business_name: form.business_name.trim(),
-        email: form.email.trim() || undefined,
-        phone: form.phone.trim() || undefined,
-        contact_method: form.contact_method,
-        message: form.message.trim(),
-        status: "new",
-      });
+      const response = await fetch("/api/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    name: form.name.trim(),
+    business_name: form.business_name.trim(),
+    email: form.email.trim(),
+    phone: form.phone.trim(),
+    contact_method: form.contact_method,
+    message: form.message.trim(),
+  }),
+});
+
+if (!response.ok) {
+  throw new Error("Failed to send enquiry");
+}
       setSubmitted(true);
       setForm(INITIAL);
     } catch (err) {
