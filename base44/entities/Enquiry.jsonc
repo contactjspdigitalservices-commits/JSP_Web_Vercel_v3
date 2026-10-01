@@ -1,0 +1,76 @@
+{
+  "name": "Enquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "minLength": 2,
+      "description": "The name of the person enquiring"
+    },
+    "business_name": {
+      "type": "string",
+      "title": "Business Name",
+      "default": "",
+      "description": "Optional business name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email",
+      "description": "Contact email (optional if phone provided)"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone",
+      "description": "Contact phone (optional if email provided)"
+    },
+    "contact_method": {
+      "type": "string",
+      "title": "Preferred Contact Method",
+      "enum": [
+        "Email",
+        "Phone"
+      ],
+      "default": "Email"
+    },
+    "message": {
+      "type": "string",
+      "title": "Message",
+      "minLength": 10,
+      "description": "The enquiry message"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "new",
+        "read",
+        "responded",
+        "archived"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "name",
+    "message"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
