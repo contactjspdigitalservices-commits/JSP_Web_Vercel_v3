@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import {
   PenTool,
-  Code2,
   Server,
   RefreshCw,
-  ClipboardList,
-  Boxes,
   ArrowRight,
   LayoutTemplate,
   Check,
   MapPin,
+  Palette,
+  ContactRound,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import { useSEO } from "@/lib/useSEO";
@@ -17,52 +16,46 @@ import { useSEO } from "@/lib/useSEO";
 const SERVICES = [
   {
     icon: PenTool,
-    title: "Website Design",
-    desc: "Professional layouts, branding, typography, images and user-friendly design.",
-    points: ["Layout & structure", "Branding & colours", "Typography", "Imagery"],
-  },
-  {
-    icon: Code2,
-    title: "Website Development",
-    desc: "Responsive websites designed to work across desktop, tablet and mobile.",
-    points: ["Desktop, tablet & mobile", "Fast & clean code", "Accessible", "Standards-based"],
+    title: "Website Design & Development",
+    desc: "Professional, responsive websites designed and built around your business.",
+    points: ["Custom website design", "Mobile-friendly layouts", "Fast, clear navigation", "Features tailored to your needs"],
   },
   {
     icon: Server,
-    title: "Website Hosting",
-    desc: "Hosting solutions to keep your website available online.",
-    points: ["Reliable hosting", "Online & accessible", "Managed options", "Ongoing support"],
-  },
-  {
-    icon: RefreshCw,
-    title: "Website Redesign",
-    desc: "Modernise an outdated website and improve its appearance and usability.",
-    points: ["Modern look & feel", "Better usability", "Updated content", "Mobile-friendly"],
-  },
-  {
-    icon: ClipboardList,
-    title: "Website Maintenance & Updates",
-    desc: "Updates to content, images, services, contact information and other website elements.",
-    points: ["Content updates", "Image changes", "Service info", "Contact details"],
-  },
-  {
-    icon: Boxes,
-    title: "Custom Website Solutions",
-    desc: "Additional functionality and features based on your individual requirements.",
-    points: ["Tailored features", "Built around you", "Flexible scope", "Quote on request"],
+    title: "Website Hosting & Maintenance",
+    desc: "Hosting options and ongoing website updates to keep your business online.",
+    points: ["Hosting options", "Content and image updates", "Website maintenance", "Support packages available"],
   },
   {
     icon: MapPin,
     title: "Google Business Profile",
-    desc: "Setup and updates for your Google Business Profile to help customers find you on Google Search and Maps.",
-    points: ["Profile setup", "Business details", "Updates & edits", "Local visibility"],
+    desc: "Help eligible local businesses appear on Google Search and Maps with profile setup and updates.",
+    points: ["Profile setup", "Business information", "Profile updates", "Local visibility"],
+  },
+  {
+    icon: ContactRound,
+    title: "Flyer & Business Card Design",
+    desc: "Branded flyer and business card artwork for promoting your business. Printing is not included.",
+    points: ["Flyer layouts", "Business card artwork", "Brand-matched designs", "Digital files for printing"],
+  },
+  {
+    icon: Palette,
+    title: "Logo Design",
+    desc: "Logo concepts designed to give your business a recognisable visual identity.",
+    points: ["Personalised logo concepts", "Colours and typography", "Digital logo files", "Revisions agreed in advance"],
+  },
+  {
+    icon: RefreshCw,
+    title: "Website Redesigns",
+    desc: "Refresh an existing website with a clearer, more modern and mobile-friendly design.",
+    points: ["Modern appearance", "Improved navigation", "Updated content", "Responsive layouts"],
   },
 ];
 
 export default function Services() {
   useSEO(
-    "Web Design & Development Services | JSP Web Lab Solihull",
-    "JSP Web Lab offers affordable website design, development, hosting, redesigns, maintenance and custom solutions for small businesses in Solihull and the West Midlands."
+    "Website Design, Branding & Digital Services | JSP Web Lab Solihull",
+    "JSP Web Lab offers affordable website design, redesigns, hosting, Google Business Profile setup, logo design, flyers and business cards in Solihull."
   );
   return (
     <>
@@ -82,13 +75,12 @@ export default function Services() {
             Our Services
           </span>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            From idea to finished website
+            Websites, branding & business essentials
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-            Based in Solihull, JSP Web Lab provides a professional and personal
-            service — affordable web solutions designed around your business,
-            with the chance to review your website and request changes before
-            it's completed.
+            Based in Solihull, JSP Web Lab helps businesses build a professional
+            online presence and a consistent brand, with affordable website
+            services, logo design, flyers and business cards.
           </p>
         </div>
       </section>
