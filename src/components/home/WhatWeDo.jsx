@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import {
   PenTool,
@@ -7,6 +8,9 @@ import {
   MapPin,
   Building2,
   ArrowRight,
+  Palette,
+  FileImage,
+  ContactRound,
 } from "lucide-react";
 
 const ITEMS = [
@@ -40,6 +44,21 @@ const ITEMS = [
     title: "Custom Website Solutions",
     desc: "Custom features and functionality built around the individual needs and budget of your business.",
   },
+  {
+    icon: Palette,
+    title: "Logo Design",
+    desc: "Professional logo designs tailored to your business, helping you create a recognisable brand identity.",
+  },
+  {
+    icon: FileImage,
+    title: "Flyer Design",
+    desc: "Eye-catching promotional flyers designed to advertise your business, services and special offers.",
+  },
+  {
+    icon: ContactRound,
+    title: "Business Card Design",
+    desc: "Professional business card designs featuring your branding, contact information and optional QR codes.",
+  },
 ];
 
 export default function WhatWeDo() {
@@ -50,13 +69,16 @@ export default function WhatWeDo() {
           <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#FF6A00]">
             What We Do
           </span>
+
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#0A0A0A] sm:text-4xl lg:text-5xl">
-            Helping small businesses get online
+            Helping small businesses grow
           </h2>
+
           <p className="mt-5 text-lg leading-relaxed text-[#595E63]">
-            JSP Web Lab helps small businesses establish and improve their
-            online presence through professional websites — without the
-            complexity or the price tag of a traditional agency.
+            JSP Web Lab helps small businesses build their online presence
+            and professional brand through affordable website design,
+            Google Business Profile services and business branding —
+            without the complexity or price tag of a traditional agency.
           </p>
         </div>
 
@@ -69,8 +91,14 @@ export default function WhatWeDo() {
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0A0A0A] text-[#FF6A00] transition-all group-hover:bg-[#FF6A00] group-hover:text-black">
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 text-xl font-bold text-[#0A0A0A]">{title}</h3>
-              <p className="mt-2 leading-relaxed text-[#595E63]">{desc}</p>
+
+              <h3 className="mt-5 text-xl font-bold text-[#0A0A0A]">
+                {title}
+              </h3>
+
+              <p className="mt-2 leading-relaxed text-[#595E63]">
+                {desc}
+              </p>
             </div>
           ))}
         </div>
