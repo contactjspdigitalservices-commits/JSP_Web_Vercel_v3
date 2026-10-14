@@ -2,69 +2,55 @@
 import { Link } from "react-router-dom";
 import {
   PenTool,
-  Code2,
   Server,
   RefreshCw,
   MapPin,
-  Building2,
-  ArrowRight,
   Palette,
-  FileImage,
   ContactRound,
+  ArrowRight,
 } from "lucide-react";
 
 const ITEMS = [
   {
     icon: PenTool,
-    title: "Website Design",
-    desc: "Modern, professional websites designed around your business and brand.",
-  },
-  {
-    icon: Code2,
-    title: "Website Development",
-    desc: "Responsive websites built to work smoothly across phones, tablets and computers.",
+    title: "Website Design & Development",
+    desc: "Modern, professional websites designed and developed around your business, fully responsive across phones, tablets and computers.",
   },
   {
     icon: Server,
-    title: "Website Hosting",
-    desc: "Reliable hosting options to keep your website online and accessible to customers.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Website Redesigns",
-    desc: "Improve an existing website with a modern, professional design.",
+    title: "Website Hosting & Maintenance",
+    desc: "Reliable hosting options, website updates and ongoing support to keep your website running smoothly.",
   },
   {
     icon: MapPin,
     title: "Google Business Profile",
-    desc: "Set up and update your Google Business Profile so customers can find you on Google Search and Maps.",
+    desc: "Set up and optimise your Google Business Profile to help customers find you on Google Search and Maps.",
   },
   {
-    icon: Building2,
-    title: "Custom Website Solutions",
-    desc: "Custom features and functionality built around the individual needs and budget of your business.",
+    icon: ContactRound,
+    title: "Flyer & Business Card Design",
+    desc: "Professional flyers and business cards designed to promote your business and showcase your branding.",
   },
   {
     icon: Palette,
     title: "Logo Design",
-    desc: "Professional logo designs tailored to your business, helping you create a recognisable brand identity.",
+    desc: "Custom logo designs tailored to your business, helping you build a recognisable and professional brand identity.",
   },
   {
-    icon: FileImage,
-    title: "Flyer Design",
-    desc: "Eye-catching promotional flyers designed to advertise your business, services and special offers.",
-  },
-  {
-    icon: ContactRound,
-    title: "Business Card Design",
-    desc: "Professional business card designs featuring your branding, contact information and optional QR codes.",
+    icon: RefreshCw,
+    title: "Website Redesigns",
+    desc: "Transform an existing website with a refreshed design, improved usability and a modern, mobile-friendly layout.",
   },
 ];
 
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="scroll-mt-24 bg-white py-20 sm:py-28">
+    <section
+      id="what-we-do"
+      className="scroll-mt-24 bg-white py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-bold uppercase tracking-[0.25em] text-[#FF6A00]">
             What We Do
@@ -112,6 +98,7 @@ export default function WhatWeDo() {
             <ArrowRight className="h-4 w-4 text-[#FF6A00]" />
           </Link>
         </div>
+
       </div>
     </section>
   );
